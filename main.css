@@ -20,7 +20,6 @@ body {
   font-size: 2.3vh;
   } */
   #nametag {
-    
     z-index: -5;
     color: rgba(196, 167, 167);
 }
@@ -62,6 +61,7 @@ body {
 .e {
     grid-area: f;
 }
+/* -------------------- ABOUT ME ------------- */
 .iam{
     grid-area: main;
     margin: 3vmax;
@@ -76,7 +76,20 @@ body {
     text-align:right;
     margin-right: 2vw;
 } */
+/* -------------------- WORK ------------- */
 
+.img1{
+grid-area: side;
+object-fit: cover;
+    width: 100%;
+}
+.img2{
+    grid-area: main;
+object-fit: cover;
+    width: 100%;
+}
+
+  
 .bounce {
     /* position: relative; */
     margin: 0 auto;
