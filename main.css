@@ -12,20 +12,21 @@ body {
     color: whitesmoke;
     background: black;
     height: 100vh;
-    display: grid;
-    grid: "a b c d e f" auto "n n n n n n" 1fr "side main main main main main" 5fr/3.5fr 1fr 1fr 1fr 1fr 1fr;
+    /* display: grid;
+    grid: "a b c d e f" auto "n n n n n n" 1fr "side main main main main main" 5fr/3.5fr 1fr 1fr 1fr 1fr 1fr; */
 }
 
-/* body > * {
-  font-size: 2.3vh;
-  } */
-  #nametag {
+.header {
+    display: grid;
+    grid: "a b c d e f" auto "n n n n n n" 1fr/3.5fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#nametag {
     z-index: -5;
     color: rgba(196, 167, 167);
 }
 
 .circlemain {
-    grid-area: n;
     font-size: clamp(2.6em, calc(2.6rem + ((1vw - 0.234375em) * 0.7758)), 3em);
     z-index: 6;
 }
@@ -34,7 +35,9 @@ body {
     grid-area: n;
     font-size: 2vmax;
     z-index: 5;
+    padding-bottom: 1em;
 }
+
 .a, .b, .c, .d, .e {
     font-size: 2vmax;
     margin: 2vh;
@@ -61,40 +64,48 @@ body {
 .e {
     grid-area: f;
 }
+
 /* -------------------- ABOUT ME ------------- */
-.iam{
-    grid-area: main;
-    margin: 3vmax;
+
+.iam {
+    flex: 2 1 300px;
+    justify-self: right;
 }
-.links{
-    grid-area: side;
-    margin: 3vmax;
+
+.links {
+    margin-right: 3vmax;
     text-align: right;
+    justify-content: right;
+    flex: 1 1 300px;
 }
+
 /* .arrows{
     grid-area: left;
     text-align:right;
     margin-right: 2vw;
 } */
+
 /* -------------------- WORK ------------- */
 
-.img1{
-grid-area: side;
-object-fit: cover;
-    width: 100%;
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3vmax;
 }
-.img2{
-    grid-area: main;
-object-fit: cover;
+
+.project-item {
+    flex: 1 1 260px;
+}
+
+.project-item img {
     width: 100%;
 }
 
-  
 .bounce {
     /* position: relative; */
     margin: 0 auto;
     overflow: hidden;
-    z-index: -100;
+    z-index: -50;
     grid-area: main;
     align-self: end;
     height: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
@@ -105,6 +116,7 @@ object-fit: cover;
     border-radius: 50%;
     animation: bounce-top 2s linear both;
 }
+
 @keyframes bounce-top {
     0% {
         transform: translateY(-100vh);
@@ -140,14 +152,14 @@ object-fit: cover;
         opacity: 1;
     }
 }
+
 @media only screen and (max-width: 480px) {
-    body {
+    /* body {
         grid: "a b c d e f" auto "n n n n n n" auto "side side null null null null" auto "main main main main main main" 5fr/0 1fr 1fr 1fr 1fr 1fr;
-    }
+    } */
     .a {
         display: none;
     }
-    
     .links{
         text-align: left;
     }
