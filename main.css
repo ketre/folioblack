@@ -16,17 +16,11 @@ body {
     grid: "a b c d e f" auto "n n n n n n" 1fr "side main main main main main" 5fr/3.5fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-#menuToggle {
-    display: none;
-}
-
 /* body > * {
   font-size: 2.3vh;
   } */
   #nametag {
-    /* margin-bottom: 4vh; */
-    /* align-self: end; */
-    /* grid-area: n; */
+    
     z-index: -5;
     color: rgba(196, 167, 167);
 }
@@ -90,8 +84,10 @@ body {
     z-index: -100;
     grid-area: main;
     align-self: end;
-    height: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
-    width: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
+    height: 300px;
+    width: 300px;
+    /* height: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
+    width: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px); */
     background-color: rgb(104, 55, 55);
     border: 0;
     border-radius: 50%;
@@ -139,9 +135,7 @@ body {
     .a {
         display: none;
     }
-    .mainpage{
-        align-self: baseline;
-    }
+    
     .links{
         text-align: left;
     }
