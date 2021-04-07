@@ -84,10 +84,9 @@ body {
     z-index: -100;
     grid-area: main;
     align-self: end;
-    height: 300px;
-    width: 300px;
-    /* height: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
-    width: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px); */
+    height: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
+    width: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
+    min-height: 0vw;
     background-color: rgb(104, 55, 55);
     border: 0;
     border-radius: 50%;
