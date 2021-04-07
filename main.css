@@ -4,13 +4,13 @@ a {
 }
 
 body {
-    margin: 0;
+    margin: 0 3vmax 0 3vmax;
     font-size: clamp(1em, calc(1rem + ((1vw - 0.234375em) * 0.7758)), 1.4em);
     line-height: 1.6;
     font-family: 'Helvetica';
     font-weight: lighter;
     color: whitesmoke;
-    background: black;
+    background: rgb(0, 0, 0);
     height: 100vh;
     /* display: grid;
     grid: "a b c d e f" auto "n n n n n n" 1fr "side main main main main main" 5fr/3.5fr 1fr 1fr 1fr 1fr 1fr; */
@@ -68,13 +68,13 @@ body {
 /* -------------------- ABOUT ME ------------- */
 
 .iam {
-    margin: 1em 3vmax 0 3vmax;
+    margin-top: 1em;
     flex: 2 1 300px;
     justify-self: right;
 }
 
 .links {
-    margin: 1em 0 1em 3vmax;
+    margin: 1em 3vmax 1em 0;
     text-align: right;
     justify-content: right;
     flex: 1 1 300px;
@@ -91,24 +91,31 @@ body {
 .main {
     display: flex;
     flex-flow: row wrap;
-    /* margin: 3vmax; */
+
 }
 
 .project-item {
-    flex: 1 1 260px;
+    flex: 1 1 auto;
+    width: 50%;
+    min-width: 300px;
+    margin: 2em 0 2em 0;
 }
 
 .project-item img {
     width: 100%;
 }
+figure{
+    margin: 0 1vmin 0 1vmin;
+}
+figcaption{
+padding-top: 0.7em;
+}
 
 .bounce {
-    /* position: relative; */
+    position: relative;
     margin: 0 auto;
     overflow: hidden;
     z-index: -50;
-    grid-area: main;
-    align-self: end;
     height: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
     width: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
     min-height: 0vw;
@@ -140,7 +147,7 @@ body {
         animation-timing-function: ease-in;
     }
     93% {
-        transform: translateY(-10vw);
+        transform: translateY(-10vh);
         animation-timing-function: ease-in;
     }
     25%, 55%, 75%, 87% {
@@ -148,16 +155,14 @@ body {
         animation-timing-function: ease-out;
     }
     100% {
-        transform: translateY(-2vh);
+        transform: translateY(0%);
         animation-timing-function: ease-out;
         opacity: 1;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    /* body {
-        grid: "a b c d e f" auto "n n n n n n" auto "side side null null null null" auto "main main main main main main" 5fr/0 1fr 1fr 1fr 1fr 1fr;
-    } */
+   
     .a {
         display: none;
     }
