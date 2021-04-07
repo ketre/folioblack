@@ -68,12 +68,13 @@ body {
 /* -------------------- ABOUT ME ------------- */
 
 .iam {
+    margin: 1em 3vmax 0 3vmax;
     flex: 2 1 300px;
     justify-self: right;
 }
 
 .links {
-    margin-right: 3vmax;
+    margin: 1em 0 1em 3vmax;
     text-align: right;
     justify-content: right;
     flex: 1 1 300px;
@@ -90,7 +91,7 @@ body {
 .main {
     display: flex;
     flex-flow: row wrap;
-    margin: 3vmax;
+    /* margin: 3vmax; */
 }
 
 .project-item {
