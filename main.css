@@ -27,27 +27,28 @@ body {
     font-weight: bolder;
     color: rgb(243, 235, 241);
     display: grid;
-    grid: "a b c d e f" auto "n n n n n n" 1fr/3.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid: "a b c d e f" auto "n n n n n n" 1fr /2fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #nametag {
     z-index: -5;
     font-weight: lighter;
-    /* color: rgb(238, 11, 79); */
 }
 
 .circlemain {
     /* font-size: clamp(2.6em, calc(2.6rem + ((1vw - 0.234375em) * 0.7758)), 3em); */
     z-index: 6;
     font-weight: light;
+    grid-area: n;
 }
 
 .circle {
     /* font-weight: light; */
-    grid-area: n;
     font-size: 2vmax;
     z-index: 5;
     padding-bottom: 1em;
+    grid-area: n;
+
 }
 
 .a, .b, .c, .d, .e {
@@ -56,7 +57,9 @@ body {
     text-align: left;
     margin-top: 1em;
 }
-
+.b, .c, .d {
+    text-align: center;
+}
 .a {
     grid-area: a;
 }
@@ -75,13 +78,14 @@ body {
 
 .e {
     grid-area: f;
+    text-align: end;
 }
 
 /* -------------------- ABOUT ME ------------- */
 
 .iam {
     margin-top: 1em;
-    flex: 2 1 300px;
+    flex: 4 1 300px;
     justify-self: right;
 }
 
@@ -122,13 +126,7 @@ figure{
 figcaption{
 padding-top: 0.7em;
 }
-/* #myCanvas{
-    width: 100vw;
-    position: absolute;
-    height: 100vh; 
-    width: 100vw; 
-    display: block;
-} */
+
 .bounce {
     position: relative;
     margin: 0 auto;
@@ -143,7 +141,8 @@ padding-top: 0.7em;
     animation: bounce-top 2s linear both;
 }
 #ball1{
-    
+    position: relative;
+    margin: 0;
     height: 100px;
     width: 100px;
 }
