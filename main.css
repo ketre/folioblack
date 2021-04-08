@@ -23,7 +23,8 @@ body {
 }
 
 .header {
-    font-family: "Daaron";
+    /* font-family: "Daaron"; */
+    font-weight: bolder;
     color: rgb(243, 235, 241);
     display: grid;
     grid: "a b c d e f" auto "n n n n n n" 1fr/3.5fr 1fr 1fr 1fr 1fr 1fr;
@@ -31,15 +32,18 @@ body {
 
 #nametag {
     z-index: -5;
+    font-weight: lighter;
     /* color: rgb(238, 11, 79); */
 }
 
 .circlemain {
     /* font-size: clamp(2.6em, calc(2.6rem + ((1vw - 0.234375em) * 0.7758)), 3em); */
     z-index: 6;
+    font-weight: light;
 }
 
 .circle {
+    /* font-weight: light; */
     grid-area: n;
     font-size: 2vmax;
     z-index: 5;
@@ -138,7 +142,11 @@ padding-top: 0.7em;
     border-radius: 50%;
     animation: bounce-top 2s linear both;
 }
-
+#ball1{
+    
+    height: 100px;
+    width: 100px;
+}
 @keyframes bounce-top {
     0% {
         transform: translateY(-100vh);

@@ -1,7 +1,7 @@
         window.addEventListener('load', ()=>{
         resize(); // Resizes the canvas once the window loads
-        document.addEventListener('mousedown', startPainting);
-        document.addEventListener('mouseup', stopPainting);
+        document.addEventListener('mouseenter', startPainting);
+        document.addEventListener('mouseleave', stopPainting);
         document.addEventListener('mousemove', sketch);
         window.addEventListener('resize', resize);
     }); 
@@ -20,7 +20,7 @@
         coord.x = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
         coord.y = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
       }
-      function getPosition(event){
+  function getPosition(event){
   coord.x = event.clientX - canvas.offsetLeft;
   coord.y = event.clientY - canvas.offsetTop;
 }
@@ -32,14 +32,14 @@ function startPainting(event){
 function stopPainting(){
   paint = false;
 }
-      canvas.onmousedown = function() {
+      canvas.onmouseenter = function() {
         pressed = true;
       };
 
-      canvas.onmouseup = function() {
+      canvas.onmouseleave = function() {
         pressed = false;
       }
-      function sketch(event){
+  function sketch(event){
   if (!paint) return;
   ctx.beginPath();
         ctx.strokeStyle = 'rgb(255, 255, 255)';
