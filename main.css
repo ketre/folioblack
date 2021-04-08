@@ -1,8 +1,14 @@
-a {
+a:link, a:visited {
     color: inherit;
     text-decoration: none;
 }
-
+a:active{
+    color: rgb(238, 11, 79);
+}
+@font-face {
+    font-family: 'Daaron';
+    src: url(public/assets/fonts/Daaron-regular.otf);
+}
 body {
     margin: 0 3vmax 0 3vmax;
     font-size: clamp(1em, calc(1rem + ((1vw - 0.234375em) * 0.7758)), 1.4em);
@@ -17,17 +23,19 @@ body {
 }
 
 .header {
+    font-family: "Daaron";
+    color: rgb(243, 235, 241);
     display: grid;
     grid: "a b c d e f" auto "n n n n n n" 1fr/3.5fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #nametag {
     z-index: -5;
-    color: rgba(196, 167, 167);
+    /* color: rgb(238, 11, 79); */
 }
 
 .circlemain {
-    font-size: clamp(2.6em, calc(2.6rem + ((1vw - 0.234375em) * 0.7758)), 3em);
+    /* font-size: clamp(2.6em, calc(2.6rem + ((1vw - 0.234375em) * 0.7758)), 3em); */
     z-index: 6;
 }
 
@@ -125,7 +133,7 @@ padding-top: 0.7em;
     height: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
     width: clamp(300px, calc(18.75rem + ((1vw - 3.75px) * 25.4545)), 510px);
     min-height: 0vw;
-    background-color: rgb(104, 55, 55);
+    background-color:rgb(238, 11, 79, 24);
     border: 0;
     border-radius: 50%;
     animation: bounce-top 2s linear both;
