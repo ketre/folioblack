@@ -1,3 +1,4 @@
+(function() {
         window.addEventListener('load', ()=>{
         resize(); // Resizes the canvas once the window loads
         document.addEventListener('mouseenter', startPainting);
@@ -17,14 +18,14 @@
 
       // update mouse pointer coordinates
       document.onmousemove = function(e) {
-        coord.x = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-        coord.y = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+        coord.x = e.clientX +  document.body.scrollLeft;
+        coord.y = e.clientY + document.body.scrollTop;
       }
   function getPosition(event){
   coord.x = event.clientX - canvas.offsetLeft;
   coord.y = event.clientY - canvas.offsetTop;
 }
-let paint = false;
+var paint = false;
 function startPainting(event){
   paint = true;
   getPosition(event);
@@ -42,10 +43,12 @@ function stopPainting(){
   function sketch(event){
   if (!paint) return;
   ctx.beginPath();
-        ctx.strokeStyle = 'rgb(255, 255, 255)';
+        ctx.strokeStyle = 'whitesmoke';
           ctx.beginPath();
           ctx.moveTo(coord.x, coord.y);
           getPosition(event);
           ctx.lineTo(coord.x , coord.y);
           ctx.stroke();
         }
+      })();
+      
