@@ -62,7 +62,7 @@ body {
     font-size: 2vmax;
     z-index: 5;
     padding-bottom: 1em;
-    grid-area: n;
+    margin: auto;   
 
 }
 
@@ -125,9 +125,10 @@ body {
 }
 .f{
     grid-area: world;
-    font-size: 2.5em;
+    font-size: clamp(1.85em, calc(1.85rem + ((1vw - 0.234375em) * 1.2606)), 2.5em);
+    min-height: 0vw;
     font-style: italic;
-    padding-left: 2.5vmin;
+    padding: 1.5vmax 0 0 2.5vmin;
 }
 
 /* -------------------- WORK ------------- */
@@ -267,7 +268,7 @@ margin: 0.5em;
 }
 
 @media only screen and (max-width: 480px) {
-   
+    
     .a {
         display: none;
     }
