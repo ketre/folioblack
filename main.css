@@ -1,19 +1,39 @@
 a {
     color: inherit;
     text-decoration: none;
+    position: relative;
+
 }
-a:active{
+a:active {
     color: rgb(238, 11, 79);
 }
+a.linkdecoration:after {    
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(238, 11, 79);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a.linkdecoration:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
 @font-face {
-    font-family: 'Daaron';
-    src: url(public/assets/fonts/Daaron-regular.otf);
+    font-family: "Suisse Light";
+    src: url(public/assets/fonts/SuisseIntl-Light-WebTrial.woff2);
+}
+@font-face {
+    font-family: "Suisse Bold";
+        src: url(public/assets/fonts/SuisseIntl-Bold-WebTrial.woff2);
 }
 body {
     margin: 0 3vmax 0 3vmax;
-    font-size: clamp(1em, calc(1rem + ((1vw - 0.234375em) * 0.7758)), 1.4em);
+    font-size: clamp(1.1em, calc(1rem + ((1vw - 0.234375em) * 0.7758)), 1.5em);
     line-height: 1.6;
-    font-family: 'Helvetica';
+    font-family: "Suisse Light";
     font-weight: lighter;
     color: whitesmoke;
     background: rgb(0, 0, 0);
@@ -21,10 +41,9 @@ body {
     }
 
 .header {
-    font-weight: bolder;
     color: rgb(243, 235, 241);
     display: grid;
-    grid: "a x b c d e f" auto "n n n n n n n" 1fr /1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid: "a x b c d e f" auto "left left n n n rightempt rightempt" auto "left left  world  world world world world" 1fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #nametag {
@@ -97,6 +116,19 @@ body {
     text-align:right;
     margin-right: 2vw;
 } */
+/* -------------------- CONTACT ME ------------- */
+
+.contacts{
+    font-family: "Suisse Bold";
+    font-size: 5em;
+    grid-area: left;
+}
+.f{
+    grid-area: world;
+    font-size: 2.5em;
+    font-style: italic;
+    padding-left: 2.5vmin;
+}
 
 /* -------------------- WORK ------------- */
 
@@ -238,6 +270,12 @@ margin: 0.5em;
    
     .a {
         display: none;
+    }
+    .contacts{
+    /* color: rgb(238, 11, 79); */
+    /* opacity: 50%; */
+    /* z-index: -1; */
+    display: none;
     }
     .links{
         text-align: left;
