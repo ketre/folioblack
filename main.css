@@ -87,7 +87,7 @@ body {
 .header {
     color: rgb(243, 235, 241);
     display: grid;
-    grid: "a x b c d e f" auto "left left n n n rightempt rightempt" auto "left left  world  world world world world" 1fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid: "a x b c d e f" auto "n n n n n n n" auto /1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #nametag {
@@ -168,15 +168,58 @@ body {
 .contacts {
     font-family: "Suisse Bold";
     font-size: 5em;
-    grid-area: left;
+    width: fit-content;
+    /* display: inline-block; */
+    z-index: -1;
+    flex: 1 1 auto;
+
 }
 
 .f {
-    grid-area: world;
-    font-size: clamp(1.85em, calc(1.85rem + ((1vw - 0.234375em) * 1.2606)), 2.5em);
-    min-height: 0vw;
-    font-style: italic;
-    padding: 1.5vmax 0 0 2.5vmin;
+    font-size: 1em;
+    width: fit-content;
+    color: rgb(189, 189, 189);
+     margin: 0 auto;
+    padding: 0;
+    /* border-top: 1px solid whitesmoke; */
+
+}
+ul > li{
+    list-style-type: none;
+    display: inline-block;
+    padding-top: 2vmin;
+    margin: 4vmin;
+
+}
+li a{
+    color: whitesmoke;
+}
+.main1{
+    display: flex;
+    flex-flow: row ;
+    margin-right: 15%;
+    
+}
+.enquiries{
+    flex: 1 1 auto;
+    /* display: inline-block; */
+    align-self: center;
+    font-size: 2.5em; 
+    margin: 0 auto;
+    border-bottom: 1px solid whitesmoke;
+   }
+   
+.bounce1 {
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: -50;
+    height: 250px;
+    width: 250px;
+    border: 1px solid whitesmoke;
+    border-radius: 50%;
+    animation: bounce-top 2s linear both;
 }
 
 /* -------------------- WORK ------------- */
@@ -302,23 +345,23 @@ figcaption {
         animation-timing-function: ease-in;
     }
     65% {
-        transform: translateY(-22vh);
+        transform: translateY(-32vh);
         animation-timing-function: ease-in;
     }
     82% {
-        transform: translateY(-16vh);
+        transform: translateY(-27vh);
         animation-timing-function: ease-in;
     }
     93% {
-        transform: translateY(-10vh);
+        transform: translateY(-24vh);
         animation-timing-function: ease-in;
     }
     25%, 55%, 75%, 87% {
-        transform: translateY(-2vh);
+        transform: translateY(-18vh);
         animation-timing-function: ease-out;
     }
     100% {
-        transform: translateY(0%);
+        transform: translateY(-18vh);
         animation-timing-function: ease-out;
         opacity: 1;
     }
@@ -331,7 +374,7 @@ figcaption {
     .contacts {
         /* color: rgb(238, 11, 79); */
         /* opacity: 50%; */
-        /* z-index: -1; */
+        z-index: -1;
         display: none;
     }
     .links {
