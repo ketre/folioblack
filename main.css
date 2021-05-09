@@ -371,7 +371,7 @@ figcaption {
         display: none;
     }
     .main1{
-        grid: 'main' 2fr 'main2' 1fr/100%;
+        grid: 'main' 1fr 'main2' 1fr/100%;
     }
     .contacts {
         display: none;
@@ -387,6 +387,7 @@ figcaption {
         display: block;
         margin-top: 2em;
         width: 100%;
+        height: auto;
     }
 
 }
