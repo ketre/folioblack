@@ -173,7 +173,7 @@ body {
 }
 .contacts {
     font-family: "Suisse Bold";
-    font-size: 5em;
+    font-size: 5rem;
     width: fit-content;
     z-index: -1;
     grid-area: side;
@@ -181,7 +181,7 @@ body {
 }
 
 .f {
-    font-size: clamp(1em, calc(1rem + ((1vw - 0.23em) * 0.7692)), 1.4em);
+    font-size: clamp(1rem, calc(1rem + ((1vw - 0.23em) * 0.7692)), 1.4rem);
     width: fit-content;
     color: rgb(189, 189, 189);
     padding: 0;
@@ -204,7 +204,7 @@ li a{
 }
 
 .enquiries{
-    font-size: 2.4em;
+    font-size: 2.4rem;
     align-self: center;
     /* font-size: clamp(2em, calc(2rem + ((1vw - 0.68em) * 5.7143)), 2.4em); */
     margin: 0 auto;
