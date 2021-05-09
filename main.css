@@ -44,7 +44,7 @@ body {
     font-size: clamp(1.1em, calc(1rem + ((1vw - 0.234375em) * 0.7758)), 1.5em);
     line-height: 1.6;
     font-family: "Suisse Light";
-    background: rgb(24, 24, 24);
+    background: rgb(20, 20, 20);
     color: whitesmoke;
     height: 100vh;
 }
@@ -92,13 +92,24 @@ figcaption {
     display: grid;
     grid: "a x b c d e f" auto /1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+.logowrapper{
+    display: grid;
+    grid: 'logo' auto/1fr;
+}
 
-.circle {
-    font-size: 2vmax;
-    z-index: 5;
+#nametag {
     padding-bottom: 1em;
-    margin: auto;
-    display: block;
+    z-index: -5;
+    grid-area: logo;
+}
+
+.logolink {
+    height: 10rem;
+    z-index: 6;
+    width: 10rem;
+    border-radius: 50%;
+    grid-area: logo;
+    margin: 0.5em auto;
 }
 
 .a, .b, .c, .d, .e {
@@ -269,16 +280,19 @@ figcaption {
     display: flex;
     flex-flow: row wrap;
 }
-.column1wrapper{
+
+.column1wrapper {
     display: flex;
     flex-flow: column wrap;
     flex: 1;
 }
-.column2wrapper{
+
+.column2wrapper {
     display: flex;
     flex-flow: column wrap;
     flex: 1;
 }
+
 .img-wrapper {
     margin: 0.5rem;
 }
@@ -376,12 +390,12 @@ figcaption {
     .links {
         text-align: left;
     }
-    .project-info{
+    .project-info {
         margin: 2rem 0;
         padding: 0%;
         border: none;
     }
-    .project-gallery{
+    .project-gallery {
         display: block;
     }
     .thumbnail {
