@@ -351,9 +351,9 @@ figcaption {
 }
 
 .colortoggle {
-    background: url('public/assets/images/colortoggle.svg');
-    width: 3vw;
-    height: 3vw;
+    background: url('public/assets/images/colortoggle.svg') no-repeat;
+    width: 3vmax;
+    height: 3vmax;
     border: none;
     position: fixed;
     bottom: 9vh;
