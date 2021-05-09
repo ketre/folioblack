@@ -70,14 +70,20 @@ body {
     display: none;
 }
 
+figure img{
+    width: 55vw;
+}
+figcaption{
+    display: none;
+} 
+
 .newitem:hover {
     color: rgb(238, 11, 79);
     transform: scale(1.1);
 }
 
-.newitem:hover+.thumbnail {
+.newitem:hover+  .thumbnail {
     position: absolute;
-    width: 50vw;
     display: flex;
     z-index: -1;
     -webkit-filter: brightness(50%);
@@ -383,11 +389,19 @@ figcaption {
         width: 100%;
         flex-wrap: row;
     }
-    .thumbnail {
-        display: block;
-        margin-top: 2em;
-        width: 100%;
+    .thumbnail{
+        display: flex;
+        margin-bottom: 2rem;
+    }
+    figure img {
         height: auto;
+        width: 100%;
+    }
+    figcaption{
+        display: block;
+    }
+    .newitem{
+        display: none;
     }
 
 }
