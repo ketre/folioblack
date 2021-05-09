@@ -62,7 +62,7 @@ body {
 .newitem {
     margin-right: 1vmax;
     text-align: center;
-    font-size: clamp(1.4em, calc(1.8rem + ((1vw - 0.234375em) * 3.103)), 4em);
+    font-size: clamp(1em, calc(1rem + ((1vw - 0.234375em) * 3.8788)), 3em);
     transition: all 1s;
 }
 
@@ -384,4 +384,10 @@ figcaption {
         width: 100%;
         flex-wrap: row;
     }
+    .thumbnail {
+        display: block;
+        margin-top: 2em;
+        width: 100%;
+    }
+    
 }
