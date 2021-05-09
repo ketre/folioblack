@@ -385,10 +385,7 @@ figcaption {
     .links {
         text-align: left;
     }
-    .img-wrapper {
-        width: 100%;
-        flex-wrap: row;
-    }
+    
     .thumbnail{
         display: flex;
         margin-bottom: 2rem;
