@@ -1,19 +1,15 @@
 var button = document.querySelector('.colortoggle');
-function change(click) {
-  if (button.style.backgroundImage == "url('public/assets/images/sun-mode.svg')") {
-    button.style.backgroundImage = "url('public/assets/images/moon-mode.svg')";
-  } else {
-    button.style.backgroundImage = "url('public/assets/images/sun-mode.svg')"
-  }
-}
+
+window.night = true // state
 
 button.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark-mode')
-  var imgs = document.getElementsByTagName("img");
-  change();
-  for (var i = 0; i < imgs.length; i++) {
-    imgs[i].style.filter = "invert(100%)";
-  }
-  // button.style.backgroundImage = "url('public/assets/images/moon-mode.svg')";
-
+  window.night = !window.night
+  const icon = night ?
+    'sun-mode.svg' :
+    'moon-mode.svg'
+  button.style.backgroundImage = url('public/assets/images/${icon}')
+  const imgs = document.getElementsByTagName("img")
+  if (imgs)
+    imgs.forEach(img => { img.style.filter = "invert(100%)" })
 });

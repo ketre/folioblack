@@ -386,7 +386,7 @@ figcaption {
     }
     .main1 {
         grid: 'main' 1fr 'main2' 1fr/100%;
-        margin-right: 2em;
+        margin-right: 2rem;
     }
     .contacts {
         display: none;

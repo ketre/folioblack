@@ -7,9 +7,12 @@
     window.addEventListener('resize', resize);
   });
   function resize() {
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
+    // ctx.canvas.width = window.innerWidth;
+    // ctx.canvas.height = window.innerHeight;
+    ctx.canvas.width = document.body.getBoundingClientRect().width;
+  ctx.canvas.height = document.body.getBoundingClientRect().height;
   }
+  
   const canvas = document.querySelector('#myCanvas');
   const ctx = canvas.getContext('2d');
   let coord = { x: 0, y: 0 };
