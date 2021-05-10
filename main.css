@@ -98,6 +98,7 @@ figcaption {
 }
 
 #nametag {
+    font-size: 1.4rem;
     padding-bottom: 1em;
     z-index: -5;
     grid-area: logo;
@@ -365,9 +366,11 @@ figcaption {
 }
 
 .colortoggle {
-    background: url('public/assets/images/colortoggle.svg') no-repeat;
-    width: 3vmax;
-    height: 3vmax;
+    background: url('public/assets/images/sun-mode.svg') no-repeat;
+    font-size: 3rem;
+    z-index: 80;
+    width: 80px;
+    height: 80px;
     border: none;
     position: fixed;
     bottom: 9vh;
@@ -383,6 +386,7 @@ figcaption {
     }
     .main1 {
         grid: 'main' 1fr 'main2' 1fr/100%;
+        margin-right: 2em;
     }
     .contacts {
         display: none;
@@ -411,5 +415,8 @@ figcaption {
     }
     .newitem {
         display: none;
+    }
+    .f{
+        padding: 0;
     }
 }
