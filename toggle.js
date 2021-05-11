@@ -8,7 +8,7 @@ button.addEventListener('click', () => {
   const icon = night ?
     'sun-mode.svg' :
     'moon-mode.svg'
-  button.style.backgroundImage = url('public/assets/images/${icon}')
+  button.style.backgroundImage = `url('public/assets/images/${icon}')`
   const imgs = document.getElementsByTagName("img")
   if (imgs)
     imgs.forEach(img => { img.style.filter = "invert(100%)" })
