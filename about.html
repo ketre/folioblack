@@ -2,53 +2,62 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Anna Ketre </title>
-    <link rel="icon" href="/public/assets/images/snail.svg"  type="image/svg+xml">
-    <link rel="stylesheet" href="main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="utf-8">
+  <title>Anna Ketre </title>
+  <link rel="icon" href="/public/assets/images/snail.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='//cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="header">
-    <div class='a'><a href="index.html">Anna Ketre</a></div>
-    <div class='b'><a href="about.html">About</a></div>
-    <div class='c' id='selected'><a href="work.html">Works</a></div>
-    <div class='d '><a href="contact.html">Contact</a></div>
-    <div class='e'>Github</div>
-  </div>
+  <nav>
+    <div><a href="index.html">Anna Ketre</a></div>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Works</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div>Github</div>
+  </nav>
 
-  <div class=logowrapper>
-    <div id='nametag'> ANNA KETRE ANNA KETRE</div>
-    <a class='logolink' href="index.html"></a>
-</div>
-    <script src='//cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js'></script>
-     <script>const rotate = new CircleType(document.getElementById('nametag'));
-    window.addEventListener("scroll", function(){
-  nametag.style.transform=`rotate(${window.scrollY * 0.15}deg)`})
-    </script>
-    
+  <header>
+    <div> ANNA KETRE ANNA KETRE</div>
+    <a href="index.html"></a>
+    <button id="button" alt="Invert-colors"></button>
+    <script src="toggle.js"></script>
+  </header>
 
-    
-    <div class='main'>
-      
-    <div class='links'>
-        <a href="mailto:anna.ketre@gmail.com">anna.ketre@gmail.com</a><br>
+  <script>const rotate = new CircleType(document.querySelector('header>div'));
+    const nametag = document.querySelector('header>div');
+    window.addEventListener("scroll", function () {
+      nametag.style.transform = `rotate(${window.scrollY * 0.15}deg)`
+    })
+  </script>
+
+  <main>
+
+    <aside>
+      <a href="mailto:anna.ketre@gmail.com">anna.ketre@gmail.com</a><br>
       <a href=http://www.instagram.com/a.ketre>@a.ketre</a><br>
-      <a href=https://www.linkedin.com/in/annaketre>LinkedIn</a></div>
-    
-    <div class="iam">
-        I’m a creative practitioner finishing my studies in BA Design Management with Creative Computing at the University of the Arts London. My studies revolve around both the practical and theoretical frameworks, which allowed me to build my practice through live research, collaborative projects, and crits. <br><br>
-        Utilising a broad range of design and computing tools I’ve found myself to be at the intersection of technology and strategic management. I’m pursuing my interests in the broader context of design thinking and its place in the creative industries, along with the computational technologies that underpin much of its innovation.
-            </div>
-          </div>
-    
-          <div class='bounce'></div>
-          <button class="colortoggle" alt="Invert-colors"></button>
+      <a href=https://www.linkedin.com/in/annaketre>LinkedIn</a>
+    </aside>
 
-          <script src="toggle.js"></script>
-        
+    <p>
+      I’m a creative practitioner finishing my studies in BA Design Management with Creative Computing at the University
+      of the Arts London. My studies revolve around both the practical and theoretical frameworks, which allowed me to
+      build my practice through live research, collaborative projects, and crits. <br><br>
+      Utilising a broad range of design and computing tools I’ve found myself to be at the intersection of technology
+      and strategic management. I’m pursuing my interests in the broader context of design thinking and its place in the
+      creative industries, along with the computational technologies that underpin much of its innovation.
+    </p>
+  </main>
+
+  <div class='bounce'></div>
+
+
+
 </body>
 
 </html>

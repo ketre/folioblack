@@ -4,35 +4,38 @@
 <head>
     <meta charset="utf-8">
     <title>Anna Ketre </title>
-    <link rel="icon" href="/public/assets/images/snail.svg"  type="image/svg+xml">
+    <link rel="icon" href="/public/assets/images/snail.svg" type="image/svg+xml">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <!-- <script src="script.js"></script> -->
+    <script src='//cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js'></script>
+        <!-- <script src="script.js"></script> -->
 </head>
 
 <body>
-    <div id='navbar' class="header">
-        <div class='a'><a href="index.html">Anna Ketre</a></div>
-        <div class='b'><a href="about.html">About</a></div>
-        <div class='c' id='selected'><a href="work.html">Works</a></div>
-        <div class='d '><a href="contact.html">Contact</a></div>
-        <div class='e'>Github</div>
-    </div>
-    <div class=logowrapper>
-        <div id='nametag'> ANNA KETRE ANNA KETRE</div>
-        <a class='logolink' href="index.html"></a>
-    </div>
-        <script src='//cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js'></script>
-        <script>const rotate = new CircleType(document.getElementById('nametag'));
-            window.addEventListener("scroll", function () {
-                nametag.style.transform = `rotate(${window.scrollY * 0.15}deg)`
-            })
-        </script>
-    
+    <nav>
+        <div><a href="index.html">Anna Ketre</a></div>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div>Github</div>
+    </nav>
 
-    <div class='project-page'>
-        <div class='project-text'>
+    <header>
+        <div> ANNA KETRE ANNA KETRE</div>
+        <a href="index.html"></a>
+    </header>
+    
+    <script>const rotate = new CircleType(document.querySelector('header>div'));
+        const nametag = document.querySelector('header>div');
+        window.addEventListener("scroll", function () {
+          nametag.style.transform = `rotate(${window.scrollY * 0.15}deg)`
+        })
+      </script>
+
+    <main>
+        <p>
             <span style="font-size: larger;">Project Brief</span> <br> <br>
             To identify an international organisation in order to develop your proposal or collaboration. Use an
             in-depth research to produce a series of formative insights, which will then be used to create a proposal in
@@ -55,29 +58,28 @@
             restaurants due to new regulations - 'Cafes, pubs and restaurants must close as soon as possible - except
             for take-away food - to tackle coronavirus'. (PM Johnson, 2020)
 
-        </div>
-        <div class='project-info'>
+        </p>
+        <p>
             <span style="font-size: larger; font-weight: bold;">Date</span> <br>
             April 2020 <br>
             <span style="font-size: larger; font-weight: bold;">Tools</span> <br>
             Adobe Indesign, Adobe XD, Photoshop <br>
             <span style="font-size: larger; font-weight: bold;">Discipline</span> <br>
             Design Strategy, Marketing Strategy <br>
+        </p>
+
+        <div>
+            <div>
+                <img src="public/assets/images/ubereats.png" alt="Ubereats-project">
+                <img src="public/assets/images/offer_ubereats.png" alt="Ubereats-project">
+                <img src="public/assets/images/vision_ubereats.png" alt="Ubereats-project">
+            </div>
+            <div>
+                <img src="public/assets/images/mltpl.png" alt="Ubereats-project">
+                <img src="public/assets/images/posters.png" alt="Ubereats-project">
+            </div>
         </div>
-
-    </div>
-    <div class='project-gallery hover08'>
-        <div class=column1wrapper>
-       <div class='img-wrapper'> <img class='project-img' src="public/assets/images/ubereats.png" alt="Ubereats-project"></div>
-       <div class='img-wrapper'><img class='project-img' src="public/assets/images/offer_ubereats.png" alt="Ubereats-project"></div>
-       <div class='img-wrapper'> <img class='project-img' src="public/assets/images/vision_ubereats.png" alt="Ubereats-project"></div>
-
-    </div>
-    <div class='column2wrapper'>
-    <div class='img-wrapper'> <img class='project-img' src="public/assets/images/mltpl.png" alt="Ubereats-project"></div>
-        <div class='img-wrapper'> <img class='project-img' src="public/assets/images/posters.png" alt="Ubereats-project"></div>
-    </div>
-    </div>
+    </main>
 </body>
 
 </html>

@@ -7,64 +7,68 @@
     <link rel="icon" href="/public/assets/images/snail.svg" type="image/svg+xml">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src='//cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="toggle.js"></script>
 </head>
 
 <body>
-    <div id='navbar' class="header">
-        <div class='a'><a href="index.html">Anna Ketre</a></div>
-        <div class='b'><a href="about.html">About</a></div>
-        <div class='c' id='selected'><a href="work.html">Works</a></div>
-        <div class='d '><a href="contact.html">Contact</a></div>
-        <div class='e'><a href="demo.html">Github</a></div>
-    </div>
+    <nav>
+        <div><a href="index.html">Anna Ketre</a></div>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div>Github</div>
+    </nav>
 
-    <div class=logowrapper>
-        <div id='nametag'> ANNA KETRE ANNA KETRE</div>
-        <a class='logolink' href="index.html"></a>
-    </div>
-    <script src='//cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js'></script>
-    <script>const rotate = new CircleType(document.getElementById('nametag'));
+    <header>
+        <div> ANNA KETRE ANNA KETRE</div>
+        <a href="index.html"></a>
+        <button id='button' alt="Invert-colors"></button>
+    
+    </header>
+    <script>const rotate = new CircleType(document.querySelector('header>div'));
+        const nametag = document.querySelector('header>div');
         window.addEventListener("scroll", function () {
             nametag.style.transform = `rotate(${window.scrollY * 0.15}deg)`
         })
     </script>
-    <div id='gallery' class='newmain'>
-        <div class="newitem"><a href='conversations.html' class='linkdecoration'>Overheard conversations </a>/</div> 
-        <!-- <img class='thumbnail' src="public/assets/images/postcard1.png" alt="Postcard-project"> -->
-        <figure class='thumbnail'><a href='conversations.html'>
-            <img src="public/assets/images/postcard1.png" alt="Postcard-project">
-            <figcaption> Overheard conversations workshop</figcaption>
-        </a></figure>
 
-       <div class="newitem"><a href='ubereats.html' class='linkdecoration'>Ubereats marketing strategy  </a>/</div> 
-        <!-- <img class='thumbnail' src="public/assets/images/ubereats.png" alt="Postcard-project"> -->
-        <figure class='thumbnail'><a href="ubereats.html">
-            <img  src="public/assets/images/ubereats.png" alt="Ubereats-project">
-            <figcaption>Ubereats strategy proposal</figcaption>
-        </a></figure>
+    <main>
+        <h2><a href='conversations.html' class='linkdecoration'>Overheard conversations <sup>01</sup></a></h2>
+        <figure><a href='conversations.html'>
+                <img src="public/assets/images/postcard1.png" alt="Postcard-project">
+                <figcaption> Overheard conversations workshop</figcaption>
+            </a></figure>
+
+        <h2><a href='ubereats.html' class='linkdecoration'>Ubereats marketing strategy <sup>02</sup> </a></h2>
+        <figure><a href="ubereats.html">
+                <img src="public/assets/images/ubereats.png" alt="Ubereats-project">
+                <figcaption>Ubereats strategy proposal</figcaption>
+            </a></figure>
 
 
-       <div class="newitem"><a href='exhibition.html' class='linkdecoration'><span style="font-style: italic;">No Pressure!</span> Exhibition </a> /</div>
-        <!-- <img class='thumbnail' src="public/assets/images/nopressure_exhibition.png" alt="Postcard-project"> -->
-        <figure class='thumbnail'><a href="exhibition.html">
-            <img src="public/assets/images/nopressure1.png" alt="NoPressure-project">
-            <figcaption><span style="font-style: italic;">No Pressure!</span> Exhibition</figcaption>
-        </a></figure>
+        <h2><a href='exhibition.html' class='linkdecoration'><span style="font-style: italic;">No Pressure!</span>
+                Exhibition <sup>03</sup></a> </h2>
+        <figure><a href="exhibition.html">
+                <img src="public/assets/images/nopressure1.png" alt="NoPressure-project">
+                <figcaption><i>No Pressure!</i> Exhibition</figcaption>
+            </a></figure>
 
-        <div class="newitem"><a href='mazegame.html' class='linkdecoration'>Maze game with a gesture sensor </a> /</div> 
-        <figure class="thumbnail"><a href="mazegame.html">
-         <img src="public/assets/images/mazegame.png" alt="Maze-project">
-         <figcaption>Gesture sensor in a maze game</figcaption>
-        </a></figure>
+        <h2><a href='mazegame.html' class='linkdecoration'>Maze game with a gesture sensor <sup>04</sup></a> </h2>
+        <figure><a href="mazegame.html">
+                <img src="public/assets/images/mazegame.png" alt="Maze-project">
+                <figcaption>Gesture sensor in a maze game</figcaption>
+            </a></figure>
 
-       <div class="newitem"><a href='https://www.researchgate.net/publication/351285942_Reading_El_HoyoThe_Platform_Gaztelu-_Urrutia_2019_as_a_comment_on_global_citizenship/references' class='linkdecoration' class='linkdecoration'>Contextual studies ↗/ </a></div> 
-       <div class="newitem"><a href='conversations.html' class='linkdecoration'>Writing ↗</a></div> 
-    </div>
-    <button class="colortoggle" alt="Invert-colors"></button>
+        <h2><a href='https://www.researchgate.net/publication/351285942_Reading_El_HoyoThe_Platform_Gaztelu-_Urrutia_2019_as_a_comment_on_global_citizenship/references'
+                class='linkdecoration' class='linkdecoration'>Contextual studies ↗/ </a></div>
+            <h2><a href='conversations.html' class='linkdecoration'>Writing ↗</a></h2>
+    </main>
+    
 
-    <script src="toggle.js"></script>
-  
 </body>
 
 </html>
