@@ -40,7 +40,7 @@ main a:after, section a:after {
 
 body {
     margin: 0 2vmax 0 2vmax;
-    font-size: clamp(1.1em, calc(1rem + ((1vw - 0.234375em) * 0.7758)), 1.5em);
+    font-size: clamp(1rem, calc(1rem + ((1vw - 0.23rem) * 0.9615)), 1.5rem);
     line-height: 1.6;
     font-family: "Suisse Light";
     background: rgb(20, 20, 20);
@@ -89,12 +89,10 @@ main h2:hover + figure {
 header {
     display: grid;
     grid: 'logo' auto/1fr;
-    padding-bottom: 4em;
+    padding-bottom: 3.3rem;
 }
 
 header>div:first-child {
-    font-size: 1.4rem;
-    
     z-index: -5;
     grid-area: logo;
 }
@@ -138,6 +136,7 @@ section h1 {
     font-size: 5rem;
     z-index: -1;
     grid-area: side;
+    margin-bottom: 0;
 }
 
 section ul {
@@ -159,9 +158,10 @@ li a {
     color: whitesmoke;
 }
 
-section h2 {
-    font-size: 2.4rem;
+section h4 {
+    font-size: clamp(2.4rem, calc(2.4rem + ((1vw - 0.23rem) * 0.3846)), 2.6rem);
     align-self: center;
+    grid-area: main;
     margin: 0 2rem 0 auto;
     border-bottom: 1px solid whitesmoke;
 }
@@ -323,7 +323,7 @@ button {
 
 nav {
     margin: 2vh;
-    font-size: 2vmax;
+    font-size: 1.2em;
     white-space: nowrap;
     display: flex;
     flex-flow: row nowrap;
@@ -348,7 +348,7 @@ ul li {
         grid: 'main' 1fr 'main2' 1fr/100%;
         margin-right: 2rem;
     }
-     h1, nav>div:first-child {
+     h1, h2, nav>div:first-child {
         display: none;
     }
     #button{
